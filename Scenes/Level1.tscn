@@ -7,10 +7,11 @@
 [ext_resource path="res://Scenes/SpikesTop.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Coin.tscn" type="PackedScene" id=6]
 
-[node name="Level1" type="Node2D" index="0"]
+[node name="Level1" type="Node2D"]
 
 script = ExtResource( 1 )
 starting_lives = 3
+coin_target = 2
 
 [node name="Player" parent="." index="0" instance=ExtResource( 2 )]
 
