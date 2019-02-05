@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Scripts/SpikesTop.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Hazards.gd" type="Script" id=1]
 [ext_resource path="res://GFX/Environment/spikes_top.png" type="Texture" id=2]
 
 [node name="SpikesTop" type="Area2D"]
@@ -29,6 +29,6 @@ texture = ExtResource( 2 )
 build_mode = 0
 polygon = PoolVector2Array( -47.3177, 25.5916, -30.9087, -26.7911, -15.4464, 22.1205, -0.457321, -25.6866, 14.6895, 22.5938, 30.3096, -25.2133, 44.0364, 24.1716 )
 
-[connection signal="body_entered" from="." to="." method="_on_SpikesTop_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 
 

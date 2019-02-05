@@ -1,14 +1,16 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/GameState.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/PlatformTiles.tres" type="TileSet" id=4]
 [ext_resource path="res://Scenes/SpikesTop.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Coin.tscn" type="PackedScene" id=6]
 
 [node name="Level1" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
+starting_lives = 3
 
 [node name="Player" parent="." index="0" instance=ExtResource( 2 )]
 
@@ -47,5 +49,22 @@ _sections_unfolded = [ "Collision" ]
 [node name="SpikesTop" parent="." index="2" instance=ExtResource( 5 )]
 
 position = Vector2( 1180, 810 )
+
+[node name="Coins" type="Node2D" parent="." index="3"]
+
+[node name="Coin" parent="Coins" index="0" instance=ExtResource( 6 )]
+
+position = Vector2( 940, 730 )
+frame = 2
+
+[node name="Coin2" parent="Coins" index="1" instance=ExtResource( 6 )]
+
+position = Vector2( 1390, 510 )
+frame = 2
+
+[node name="Coin3" parent="Coins" index="2" instance=ExtResource( 6 )]
+
+position = Vector2( 1750, 150 )
+frame = 2
 
 

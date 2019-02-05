@@ -46,6 +46,9 @@ func run():
 func jump():
 	if is_on_floor() && Input.is_action_pressed("ui_up"):
 		motion.y = JUMP_SPEED
+
+func hurt():
+	motion.y = JUMP_SPEED
 	
 	
 	
