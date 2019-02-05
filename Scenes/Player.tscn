@@ -50,6 +50,7 @@ _sections_unfolded = [ "Collision", "collision" ]
 __meta__ = {
 "_edit_group_": true
 }
+world_limit = 2000
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
