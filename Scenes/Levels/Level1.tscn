@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/GameState.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -14,8 +14,9 @@
 [ext_resource path="res://Scenes/jumpPad.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/Spikeman.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Cloud.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Portal.tscn" type="PackedScene" id=15]
 
-[node name="Level1" type="Node2D"]
+[node name="Level1" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 starting_lives = 3
@@ -66,17 +67,17 @@ editor/display_folded = true
 [node name="Coin" parent="Coins" index="0" instance=ExtResource( 6 )]
 
 position = Vector2( 940, 730 )
-frame = 5
+frame = 3
 
 [node name="Coin2" parent="Coins" index="1" instance=ExtResource( 6 )]
 
 position = Vector2( 1390, 510 )
-frame = 5
+frame = 3
 
 [node name="Coin3" parent="Coins" index="2" instance=ExtResource( 6 )]
 
 position = Vector2( 1750, 150 )
-frame = 5
+frame = 3
 
 [node name="Sounds" type="Node2D" parent="." index="4"]
 
@@ -122,5 +123,11 @@ position = Vector2( 2320, 820 )
 [node name="Cloud" parent="." index="7" instance=ExtResource( 14 )]
 
 position = Vector2( 1610, 60 )
+
+[node name="Portal" parent="." index="8" instance=ExtResource( 15 )]
+
+position = Vector2( 280, 300 )
+
+[connection signal="body_entered" from="Portal" to="." method="_on_Portal_body_entered"]
 
 
