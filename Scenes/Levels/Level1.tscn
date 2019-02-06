@@ -14,7 +14,7 @@
 [ext_resource path="res://Scenes/jumpPad.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/Spikeman.tscn" type="PackedScene" id=13]
 
-[node name="Level1" type="Node2D"]
+[node name="Level1" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 starting_lives = 3
@@ -65,17 +65,17 @@ editor/display_folded = true
 [node name="Coin" parent="Coins" index="0" instance=ExtResource( 6 )]
 
 position = Vector2( 940, 730 )
-frame = 4
+frame = 3
 
 [node name="Coin2" parent="Coins" index="1" instance=ExtResource( 6 )]
 
 position = Vector2( 1390, 510 )
-frame = 4
+frame = 3
 
 [node name="Coin3" parent="Coins" index="2" instance=ExtResource( 6 )]
 
 position = Vector2( 1750, 150 )
-frame = 4
+frame = 3
 
 [node name="Sounds" type="Node2D" parent="." index="4"]
 
